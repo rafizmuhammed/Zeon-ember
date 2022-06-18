@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'zionember.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'zeonember',
+        'USER' : 'root',
+        'PASSWORD': 'RAFIBMW786!@',
+        'HOST':'localhost'
     }
 }
 
