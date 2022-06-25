@@ -35,12 +35,16 @@
 </head>
 <body bgcolor="lightblue">
     <center>
-        <div class ='login-box'>
-            <h2 style = "margin-top: 30px;padding-top: 30px;">LOG IN</h2>
-            <input type="text" placeholder="user name" required><br>
-            <input type="password" placeholder="password" required><br>
-            <button>submit</button><br>
-        </div>
+        <form action="{% url 'Login' %}" method ='post'>
+            {% csrf_token %}
+            <div class ='login-box'>
+                <h2 style = "margin-top: 30px;padding-top: 30px;">LOG IN</h2>
+                <font color ='red' >{{msg}}</font>
+                <input type="text" name ="uname" placeholder="user name" required><br>
+                <input type="password" name ="pas" placeholder="password" required><br>
+                <button>submit</button><br>
+            </div>
+        </form>
               
     </center>
 </body>

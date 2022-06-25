@@ -35,17 +35,21 @@
 </head>
 <body bgcolor="lightgreen">
     <center>
-        <div class ='login-box'>
-            <h2 style = "margin-top: 30px;padding-top: 30px;">REGISTER</h2>
-            <input type="Text" placeholder="User name" required><br>
-            <input type="Text" placeholder="First name" required><br>
-            <input type="Text" placeholder="Last name" required><br>
-            <input type="Email" placeholder="Email id" required><br>
-            <input type="Password" placeholder="Password" required><br>
-            <input type="Password" placeholder="Re-password" required><br>
-            <button>submit</button><br>
-        </div>
-              
+        <form action = "{% url 'Register' %}" method ='post'>
+            {% csrf_token %}
+            <div class ='login-box'>
+                
+                <h2 style = "margin-top: 30px;padding-top: 30px;">REGISTER</h2>
+                <font color=" red">{{msg}}</font><br>
+                <input type="Text" name ='uname' placeholder="User name" required><br>
+                <input type="Text" name ='fname' placeholder="First name" required><br>
+                <input type="Text" name ='lname' placeholder="Last name" required><br>
+                <input type="Email" name='mail' placeholder="Email id" required><br>
+                <input type="Password" name ='pas' placeholder="Password" required><br>
+                <input type="Password" name ='repas'placeholder="Re-password" required><br>
+                <button>submit</button><br>
+            </div>
+        </form>   
     </center>
 </body>
 </html>

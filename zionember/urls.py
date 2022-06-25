@@ -20,6 +20,7 @@ from model import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.start),
-    path('login1/',views.login),
-    path('register',views.register)
+    path('login1/',views.login,name='Login'),
+    path('register',views.register,name ='Register'),
+    path('logout/',views.logout)
 ]

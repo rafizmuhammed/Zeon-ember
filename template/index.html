@@ -192,13 +192,18 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
+								{% if user.is_authenticated %}
+								<li class="active"><a href="#"><b>Hai, {{user.username}}</b> </a></li>
+								{% endif %}
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="about.html">About</a></li>
 								<li><a href="service.html">Service</a></li>
 								<li><a href="project.html">Project</a></li>
-								<li><a href="team.html">Team</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="register">Register</a></li>
+								<li><a href="login1/">Login</a></li>
+								<li><a href="logout/">Logout</a></li>
+
+							
 								<li>
 									<a href="#">
 										<span class="lnr lnr-cart"></span>
